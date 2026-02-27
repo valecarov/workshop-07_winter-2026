@@ -80,8 +80,8 @@ Don't forget to turn your warnings off either in the individual code chunk or in
 
 ```{r abalone-model}
 abalone_model <- lm(
-  change_in_area ~ mean_ph, # 
-  data = abalone_clean      # 
+  change_in_area ~ mean_ph, # formula: response formula ~ predictor variable
+  data = abalone_clean      # data: clean abalone data frame
 )
 ```
 
@@ -89,10 +89,14 @@ abalone_model <- lm(
 
 ```{r abalone-model-diagnostics}
 
-par(mfrow = c(2, 2))   # 
-plot(abalone_model)    # 
+par(mfrow = c(2, 2))   # displaying diagnostic plots in 2x2 grid
+plot(abalone_model)    # plotting diagnostics
 
 ```
+
+**Residuals seem homoscedastic based on residuals vs fitted and scale location plots. Residuals seem normally distributed based on qq plot. No major outliers based on residuals vs leverage plot.**
+
+Written Communication: **We evaluated model assumptions visually. For homoscedasticity of residuals, we used residuals vs fitted and scale location plots. For normality, we used qq plots. Based on our diagnostics, there were no major deviations from homoscedasticity or normality of residuals. There were also no outliers that might influence model estimates or predictions**
 
 ### Model summary
 
