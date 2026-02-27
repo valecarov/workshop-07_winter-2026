@@ -21,3 +21,4 @@ What code is there, and what does it do?
 
 The Rendered output for the pH-abalone model is 
 [here]https://valecarov.github.io/workshop-07_winter-2026/code/abalone-example.html
+The Rendered output for the Sonadora elevation temperature model example is [here]https://valecarov.github.io/workshop-07_winter-2026/code/sonadora-temperature-example.html
