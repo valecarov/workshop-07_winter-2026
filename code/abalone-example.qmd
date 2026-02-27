@@ -109,11 +109,11 @@ summary(abalone_model)
 
 What is the slope estimate (with standard error?)  
 
-**insert your response here**  
+**3.0 +- 0.8 (SE). With each incrase in pH, the model predicts n increase of 3.0 +- 0.8 in change in shell area per day (mm^2^d^-1)**  
 
 What is the intercept estimate (with standard error?)  
 
-**insert your response here**
+**-18.5 +- 6.2 (SE). When pH is equal to zero, the model predicts that abalone change in shell area per day is -18.5 (Note to self: this is not necessarily biologically realistic, but is something the model generates**
 
 ### Generating predictions
 
@@ -133,7 +133,10 @@ Look at the column names using `colnames(abalone_preds)` in the Console.
 
 What are the column names?  
 
-**insert your notes here**  
+**x (predictor variable) **  
+**predicted (model predictions for change in shell surface per day)**
+**std.error *(standard error describing precision in model predictions )**
+**conf.low and conf.high (lower and upper bounds of 95% confidence interval around model predictions)**
 
 Look at the actual object (by clicking on it in Environment).  
 
@@ -141,7 +144,7 @@ Look at the class of the object using `class(abalone_preds)` in the Console.
 
 What is this type of object?  
 
-**insert your notes here**  
+**ggeffects output object and a data frame**  
 
 View `abalone_preds` like a data frame. 
 
@@ -163,7 +166,7 @@ ggpredict(
 
 How would you interpret this?  
 
-**insert your response here**
+**At pH = 8 the model predicts that abalone shell changge in surface area per day should be 5.36 mm^2^day^-1 (95 CI: (5.08, 5.64))**
 
 ### Visualizing model predictions and data
 
