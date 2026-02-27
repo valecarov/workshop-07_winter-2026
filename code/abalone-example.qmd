@@ -56,11 +56,12 @@ Don't forget to look at your data! Use `View(abalone_clean)` in the _Console_.
 ## c. Exploratory data visualization
 
 ```{r abalone-scatterplot}
-# 
-ggplot(data = abalone_clean, # 
-       aes(x = mean_ph, # 
-           y = change_in_area)) 
-  # 
+#| warning: false
+# base layer: ggplot
+ggplot(data = abalone_clean, # starting with clean data frame
+       aes(x = mean_ph, # axis axis should be pH, y axis should be change in shell area
+           y = change_in_area)) +
+  # first layer: points to represent abalones
   geom_point(size = 4,
              stroke = 1,
              fill = "firebrick4",
@@ -69,7 +70,7 @@ ggplot(data = abalone_clean, #
 
 Where does the missing value come from?  
 
-**insert response here**  
+**Tank B1B, missing a pH reading**  
 
 Don't forget to turn your warnings off either in the individual code chunk or in the YAML at the top of the file.
 
