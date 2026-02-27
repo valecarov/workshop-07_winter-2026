@@ -32,22 +32,23 @@ Data from Hamilton et al. 2022. "Integrated multi-trophic aquaculture mitigates 
 
 Question: How does pH predict abalone growth (measured in change in shell surface area per day, mm^-2^ d^-1^)?  
 
-H~0~: **[fill in here]**  
+H~0~: **[pH does not predict abalone growth (change in shell surface area per day, m^2^d^-1^)]**  
 
-H~A~: **[fill in here]**
+H~A~: **[pH does predict abalone growth (change in shell surface area per day, m^2^d^-1^)]**
 
 ## b. Cleaning
 
 ```{r abalone-data-cleaning}
-# 
-abalone_clean <- abalone  
-  # 
-  clean_names()  
-  # 
-  select(mean_p_h, change_in_area_mm2_d_1_25)  
-  # 
+
+abalone_clean <- abalone  |> 
+  # creating new object called abalone clean from original data frame
+  clean_names()  |> 
+  # cleaning column names
+  select(mean_p_h, change_in_area_mm2_d_1_25)  |> 
+  # selecting columns of interest
   rename(mean_ph = mean_p_h, 
          change_in_area = change_in_area_mm2_d_1_25)
+  # renaming columns for clarity
 ```
 
 Don't forget to look at your data! Use `View(abalone_clean)` in the _Console_.
